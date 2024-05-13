@@ -17,7 +17,7 @@ function convertValues() {
         }).format(convertedValue);
     }
 
-      if (currencySelect.value === "EUR") {
+    if (currencySelect.value === "EUR") {
         const euroToday = 6.20; // Taxa de câmbio do Euro
         convertedValue = inputCurrencyValue / euroToday; // Conversão para Euro
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
@@ -26,22 +26,22 @@ function convertValues() {
         }).format(convertedValue);
     }
 
-     if (currencySelect.VALUE === "BIT") {
+    if (currencySelect.value === "BIT") {
         const bitcoinToday = 316115.89;
-        convertValue = inputCurrencyValue / bitcoinToday;
-        currencyValueConverted.innerHTML = new Intl.NumberFormat ("en-US", {
+        convertedValue = inputCurrencyValue / bitcoinToday;
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
             style: "currency",
-            currency: "BIT"
-        })
+            currency: "BTC"
+        }).format(convertedValue);
     }
 
-    else if (currencySelect.VALUE === "CHF") {
+    if (currencySelect.value === "CHF") {
         const francoToday = 5.58;
-        convertValue = inputCurrencyValue / francoToday;
-        currencyValueConverted.innerHTML = new Intl.NumberFormat ("en-CHF", {
+        convertedValue = inputCurrencyValue / francoToday;
+        currencyValueConverted.innerHTML = new Intl.NumberFormat("en-CH", {
             style: "currency",
             currency: "CHF"
-        })
+        }).format(convertedValue);
     }
 
     currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
@@ -50,30 +50,29 @@ function convertValues() {
     }).format(inputCurrencyValue);
 }
 
-
 function changeCurrency(){
-const currencyName = document.getElementById("currency-name")
-const currencyImage = document.querySelector(".currency-img")
+    const currencyName = document.getElementById("currency-name")
+    const currencyImage = document.querySelector(".currency-img")
 
-if (currencySelect.value == "USD"){
-    currencyName.innerHTML = "Dólar Americano"
-currencyImage.src= "./assets/Dolar.png"
-}
+    if (currencySelect.value == "USD"){
+        currencyName.innerHTML = "Dólar Americano"
+        currencyImage.src= "./assets/Dolar.png"
+    }
 
-if (currencySelect.value == "EUR"){
-    currencyName.innerHTML = "Euro"
-    currencyImage.src = "./assets/Euro.png"
-}
+    if (currencySelect.value == "EUR"){
+        currencyName.innerHTML = "Euro"
+        currencyImage.src = "./assets/Euro.png"
+    }
 
-if (currencySelect.value == "BIT"){
-    currencyName.innerHTML = "Bitcoin"
-    currencyImage.src = "./assets/bitcoin.png"
-}
+    if (currencySelect.value == "BIT"){
+        currencyName.innerHTML = "Bitcoin"
+        currencyImage.src = "./assets/bitcoin.png"
+    }
 
-if (currencySelect.value == "CHF"){
-    currencyName.innerHTML = "Franco Suiço"
-    currencyImage.src = "./assets/suiça.png"
-}
+    if (currencySelect.value == "CHF"){
+        currencyName.innerHTML = "Franco Suiço"
+        currencyImage.src = "./assets/suiça.png"
+    }
 
 }
 
