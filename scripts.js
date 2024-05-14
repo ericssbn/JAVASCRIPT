@@ -3,25 +3,6 @@ const convertButton = document.querySelector(".convert-button");
 const currencySelect = document.querySelector(".currency-select");
 const currencyToConvert = document.querySelector(".currency-to-convert")
 
-function chosenCurrency() {
-    let currencyValueToConvert = document.querySelector(".currency-value-to-convert")
-    let currencyValueConverted = document.querySelector(".currency-value-converted")
-
-    let convertValue = 0;
-
-    if (currencyValueToConvert.value === "USD")
-    let dolarToday = 5.17;
-    convertValue = inputCurrencyValue / dolarToday;
-    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD"
-    }).format(convertedValue)
-
-}
-
-
-
-
 function convertValues() {
     const inputCurrencyValue = parseFloat(document.querySelector(".input-currency").value.replace("R$ ", "").replace(".", "").replace(",", ".")); // Valor da moeda de entrada
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert"); // Elemento para mostrar valor em Real
